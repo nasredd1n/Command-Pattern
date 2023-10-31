@@ -1,0 +1,19 @@
+func (r *Restaurant) MakePizza(n int) Command {
+	return &MakePizzaCommand{
+		restaurant: r,
+		n:          n,
+	}
+}
+
+func (r *Restaurant) MakeSalad(n int) Command {
+	return &MakeSaladCommand{
+		restaurant: r,
+		n:          n,
+	}
+}
+
+func (r *Restaurant) CleanDishes() Command {
+	return &CleanDishesCommand{
+		restaurant: r,
+	}
+}
